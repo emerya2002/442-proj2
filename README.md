@@ -7,6 +7,7 @@ To Compile (in order):
 4. javac -d . Word.java
 5. javac -d . TestWords.java
 
+Project 2 Instructions:
 - To help you the Decorator code for listing the General education categories a studnet has acheived is in the decotator folder in the class11set.zip file.
 - For the assignment download the files assignment02.zip and assignment02data.zip.
 - You need to implement 2 methods in Word.java and 2 methods in Decorator.java.
