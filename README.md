@@ -4,7 +4,8 @@ To Compile (in order):
 1. javac -d . Component.java
 2. javac -d . Decorator.java
 3. javac -d . FinalPeriod.java
-4. javac -d . TestWords.java
+4. javac -d . Word.java
+5. javac -d . TestWords.java
 
 - To help you the Decorator code for listing the General education categories a studnet has acheived is in the decotator folder in the class11set.zip file.
 - For the assignment download the files assignment02.zip and assignment02data.zip.
