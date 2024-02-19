@@ -15,7 +15,6 @@ public abstract class Decorator extends Component {
 	
 	@Override
 	public Set<Character> getConsonants() {
-		// TODO Auto-generated method stub
 		Set<Character> consonants = new HashSet<>(delegate.getConsonants());
 		consonants.addAll(getConsonantsInWord());
 		return consonants;
@@ -23,7 +22,6 @@ public abstract class Decorator extends Component {
 
 	@Override
 	public Set<Set<Character>> getVowels() {
-		// TODO Auto-generated method stub
 		Set<Set<Character>>  vowels = new HashSet<>(delegate.getVowels());
 		vowels.add(getVowelsInWord());
 		return vowels;
