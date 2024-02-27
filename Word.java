@@ -11,12 +11,28 @@ public class Word extends Decorator {
 	
 	@Override
 	public Set<Character> getConsonantsInWord() {
+		Set<Character>  consonants = new HashSet<Character>();
+
+		for(char c : "bcdfghjklmnpqrstvwxz".toCharArray()) {
+			consonants.add(c);
+		}
+
+		Set<Character> consonantsinthisword = new HashSet<Character>();
+
+		for (char c : thisWord.toCharArray()){
+			if(Ywords.hasYconsonant.contains(thisWord) && (c == 'y' || c == ('Y'))){
+				consonantsinthisword.add(c);
+			}
+			if(consonants.contains(c)){
+				consonantsinthisword.add(c);
+			}
+		}
 		// return the set of characters in bcdfghjklmnpqrstvwxz 
 		// which appear in thisWord
 		// include y if thisWord is in Ywords.hasYconsonant
 		// you may find new words that have to be addes 
 		// to the file yconsonant.txt
-		return null;
+		return consonantsinthisword;
 	}
 	@Override
 	public Set<Character> getVowelsInWord() {
