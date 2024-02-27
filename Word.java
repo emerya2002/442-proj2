@@ -20,7 +20,6 @@ public class Word extends Decorator {
 	}
 	@Override
 	public Set<Character> getVowelsInWord() {
-		System.out.println("HELLO WORLD");
 
 		// return the set of characters in aeiou
 		// which appear in thisWord
@@ -35,7 +34,7 @@ public class Word extends Decorator {
 			all_vowels.add(vowel); 
 		}
 
-		boolean yVowel = Ywords.hasYvowel.contains(thisWord); 
+		boolean yVowel = Ywords.hasYvowel.contains(thisWord);
 		for(Character c : thisWord.toCharArray()){
 			if(all_vowels.contains(c)){
 				vowelSet.add(c); 

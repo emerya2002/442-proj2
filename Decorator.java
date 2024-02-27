@@ -2,6 +2,7 @@ package assignment02;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Iterator;
 
 public abstract class Decorator extends Component {
 	private Component delegate;
@@ -22,9 +23,30 @@ public abstract class Decorator extends Component {
 
 	@Override
 	public Set<Set<Character>> getVowels() {
-		Set<Set<Character>>  vowels = new HashSet<>(delegate.getVowels());
-		vowels.add(getVowelsInWord());
-		return vowels;
+		Set<Set<Character>> returnVowels = new HashSet<>();
+		Set<Set<Character>>  delegateVowelSet = new HashSet<>(delegate.getVowels());
+		Set<Character> vowelsInWord = getVowelsInWord();
+		int maxLength = 0; 
+		for(Character newVowel : vowelsInWord){
+			for(Set<Character> vowelSet : delegateVowelSet){
+
+					Set<Character> newVowelSet = new HashSet<Character>(vowelSet);
+					newVowelSet.add(newVowel); 	
+					if(newVowelSet.size() > maxLength){
+						maxLength = newVowelSet.size();
+					}	
+					returnVowels.add(newVowelSet);
+			}
+		}
+
+		Iterator<Set<Character>> iterator = returnVowels.iterator();
+        while (iterator.hasNext()) {
+            Set<Character> subset = iterator.next();
+            if (subset.size() < maxLength) {
+                iterator.remove();
+            }
+        }
+		return returnVowels;
 	}
 
 	@Override

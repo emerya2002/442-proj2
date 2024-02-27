@@ -19,7 +19,7 @@ public class TestWords {
 		//check:
 		comp.print();
 		System.out.println();
-		System.out.println(comp.getConsonants());
+		//System.out.println(comp.getConsonants());
 		System.out.println(comp.getVowels());
 	}
 }
